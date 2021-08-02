@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>modules/pagamento/pagamento-saldos.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-Pagamento.html">Pagamento</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Pagamento.html#.init">init</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-PagamentoForm.html">PagamentoForm</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoForm.html#.mount">mount</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-PagamentoParcelas.html">PagamentoParcelas</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoParcelas.html#.mount">mount</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-PagamentoPrestador.html">PagamentoPrestador</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoPrestador.html#.mount">mount</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-PagamentoSaldos.html">PagamentoSaldos</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoSaldos.html#.mount">mount</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoSaldos.html#.setBalance">setBalance</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoSaldos.html#.setCount">setCount</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoSaldos.html#.update">update</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-PagamentoTask.html">PagamentoTask</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoTask.html#.addError">addError</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoTask.html#.mount">mount</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoTask.html#.removeError">removeError</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-ParcelasService.html">ParcelasService</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ParcelasService.html#.getInstallments">getInstallments</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-PrestadorService.html">PrestadorService</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PrestadorService.html#.getContractorCdn">getContractorCdn</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-Utils.html">Utils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Utils.html#.addMonths">addMonths</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Utils.html#.currencyToNumber">currencyToNumber</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Utils.html#.getMonthNameByNumber">getMonthNameByNumber</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Utils.html#.numberToCurrency">numberToCurrency</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Utils.html#.parseDate">parseDate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Utils.html#.setValue">setValue</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">modules/pagamento/pagamento-saldos.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { currencyToNumber, numberToCurrency } from '../../helpers/utils'
+import { getInstallmentType } from './pagamento-utils'
+
+/**
+ * Controla as informações de resumo das parcelas com as informações de
+ * total, valor do serviço, despesas extras, saldo e parcelas aprovadas.
+ *
+ * @module PagamentoSaldos
+ */
+
+const PagamentoSaldos = function () {
+  const $refs = {
+    progressBar: document.querySelector('#installments-bar'),
+    medicaoPartials: document.querySelectorAll('.rsa-saldo-medicao'),
+    countApproved: document.querySelector('[data-balance=count-approved]'),
+    countTotal: document.querySelector('[data-balance=count-total]'),
+    saldoCargaHoraria: document.querySelector('[data-balance=workload]'),
+    saldoServico: document.querySelector('[data-balance=service]'),
+    saldoDespesas: document.querySelector('[data-balance=expenses]'),
+    saldoTotal: document.querySelector('[data-balance=total]'),
+    tipoPagamento: document.querySelector('[xname=inppagamento]'),
+    totalServico: document.querySelector('[xname=inpvalorDaProposta]'),
+    totalCargaHoraria: document.querySelector('[xname=inpcargaHoraria]'),
+    totalDespesas: document.querySelector('[xname=inpdespesasExtras]')
+  }
+
+  /**
+   * @memberof module:PagamentoSaldos
+   * @property {number} installmentType - tipo de parcelamento (VALOR_PARCELA ou MEDICAO_MENSAL)
+   * @property {number} total - instância global do event emitter
+   * @property {number} totalService - instância global do event emitter
+   * @property {number} totalWorkload - instância global do event emitter
+   * @property {number} totalExpenses - instância global do event emitter
+   * @property {object} balance - instância global do event emitter
+   * @property {object} current - instância global do event emitter
+   */
+  const state = {
+    installmentType: null,
+    total: 0,
+    totalService: 0,
+    totalWorkload: 0,
+    totalExpenses: 0,
+    balance: {
+      service: 0,
+      workload: 0,
+      expenses: 0,
+      total: 0
+    },
+    current: {
+      service: 0,
+      workload: 0,
+      expenses: 0,
+      total: 0
+    }
+  }
+
+  return {
+    mount,
+    update,
+    setBalance,
+    setCount
+  }
+
+  /**
+   * 🔑 Métodos Públicos
+   */
+
+  /**
+   * Realiza a montagem do módulo
+   * @public
+   * @memberof module:PagamentoSaldos
+   */
+  function mount () {
+    state.installmentType = getInstallmentType(
+      $refs.tipoPagamento.value
+    )
+
+    setTotals()
+    handleInstallmentType()
+  }
+
+  /**
+   * Atualiza os valores da parcela atual para pagamento e painel de resumo
+   * @param {number} current.service - valor do serviço da parcela
+   * @param {number} current.workload - carga horária da parcela
+   * @param {number} current.expenses - despesas da parcela
+   * @param {number} current.total - valor total da parcela
+   * @public
+   * @memberof module:PagamentoSaldos
+   */
+  function update ({ service, workload, expenses, total }) {
+    state.current.service = service
+    state.current.workload = workload
+    state.current.expenses = expenses
+    state.current.total = total
+
+    updateBalance()
+  }
+
+  /**
+   * Saldos para pagamento das parcelas
+   * @typedef {object} Balance
+   * @property {number} service - saldo de serviço
+   * @property {number} workload - saldo de carga horária
+   * @property {number} expenses - saldo de despesas
+   * @property {number} total - saldo total
+   */
+
+  /**
+   * Atualiza o saldo para pagamento e painel de resumo
+   * @param {Balance} balance - saldos para pagamento
+   * @public
+   * @memberof module:PagamentoSaldos
+   */
+  function setBalance (balance) {
+    state.balance = balance
+
+    updateBalance()
+  }
+
+  /**
+   * Atualiza a quantidade de parcelas aprovadas para pagamento
+   * e percentual do painel de resumo
+   * @param {number} config.approved - quantidade de parcelas aprovadas
+   * @param {number} config.total - total de parcelas
+   * @public
+   * @memberof module:PagamentoSaldos
+   */
+  function setCount ({ approved, total }) {
+    const percent = approved / total * 100
+
+    $refs.progressBar.style.width = `${percent}%`
+    $refs.countApproved.textContent = approved
+    $refs.countTotal.textContent = total
+  }
+
+  /**
+   * 🔒 Métodos Privados
+   */
+
+  function setTotals () {
+    state.totalService = currencyToNumber($refs.totalServico.value)
+    state.totalWorkload = parseInt($refs.totalCargaHoraria.value || 0)
+    state.totalExpenses = currencyToNumber($refs.totalDespesas.value)
+    state.total = state.totalService + state.totalExpenses
+  }
+
+  function updateBalance () {
+    const { current, balance } = state
+
+    $refs.saldoCargaHoraria.textContent = numberToCurrency(
+      state.totalWorkload - balance.workload - current.workload
+    )
+    $refs.saldoServico.textContent = numberToCurrency(
+      state.totalService - balance.service - current.service
+    )
+    $refs.saldoDespesas.textContent = numberToCurrency(
+      state.totalExpenses - balance.expenses - current.expenses
+    )
+    $refs.saldoTotal.textContent = numberToCurrency(
+      state.total - balance.total - current.total
+    )
+  }
+
+  function handleInstallmentType () {
+    if (state.installmentType !== 'MEDICAO_MENSAL') {
+      $refs.medicaoPartials.forEach(element =>
+        element.classList.add('hidden')
+      )
+    }
+  }
+}
+
+export default PagamentoSaldos()
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Sun Aug 01 2021 21:55:46 GMT-0300 (Horário Padrão de Brasília) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>modules/pagamento/pagamento-form.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-Pagamento.html">Pagamento</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Pagamento.html#.init">init</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-PagamentoForm.html">PagamentoForm</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoForm.html#.mount">mount</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-PagamentoParcelas.html">PagamentoParcelas</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoParcelas.html#.mount">mount</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-PagamentoPrestador.html">PagamentoPrestador</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoPrestador.html#.mount">mount</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-PagamentoSaldos.html">PagamentoSaldos</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoSaldos.html#.mount">mount</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoSaldos.html#.setBalance">setBalance</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoSaldos.html#.setCount">setCount</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoSaldos.html#.update">update</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-PagamentoTask.html">PagamentoTask</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoTask.html#.addError">addError</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoTask.html#.mount">mount</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PagamentoTask.html#.removeError">removeError</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-ParcelasService.html">ParcelasService</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-ParcelasService.html#.getInstallments">getInstallments</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-PrestadorService.html">PrestadorService</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-PrestadorService.html#.getContractorCdn">getContractorCdn</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-Utils.html">Utils</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Utils.html#.addMonths">addMonths</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Utils.html#.currencyToNumber">currencyToNumber</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Utils.html#.getMonthNameByNumber">getMonthNameByNumber</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Utils.html#.numberToCurrency">numberToCurrency</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Utils.html#.parseDate">parseDate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Utils.html#.setValue">setValue</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">modules/pagamento/pagamento-form.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { currencyToNumber, numberToCurrency } from '../../helpers/utils'
+import {
+  getInstallmentType,
+  setFieldHelper,
+  removeFieldError,
+  addFieldError
+} from './pagamento-utils'
+
+/**
+ * Controla os limites e valores para pagamento no formulário da parcela
+ *
+ * @module PagamentoForm
+ */
+
+const PagamentoForm = function () {
+  const $refs = {
+    tipoPagamento: document.querySelector('[xname=inppagamento]'),
+    recolheIss: document.querySelector('[xname=inprecolheISS]'),
+    recolheIssTag: document.querySelector('.o-tag[data-bind=recolheISS]'),
+    parcelaCargaHoraria: document.querySelector('[xname=inpcargaHorariaDoPagamento]'),
+    parcelaServico: document.querySelector('[xname=inpvalorAPagar]'),
+    parcelaDespesas: document.querySelector('[xname=inpdespesasAPagar]'),
+    parcelaTotal: document.querySelector('[xname=inpvalorTotalParcela]')
+  }
+
+  /**
+   * @memberof module:PagamentoForm
+   * @property {object} emitter - instância global do event emitter
+   * @property {string} installmentType - tipo de parcelamento (VALOR_PARCELA ou MEDICAO_MENSAL)
+   * @property {number} expenses - valor das despesas da parcela
+   * @property {number} service - valor do serviço do parcela
+   * @property {number} workload - carga horária da parcela
+   * @property {number} total - valor total da parcela
+   */
+  const state = {
+    emitter: null,
+    installmentType: null,
+    expenses: 0,
+    service: 0,
+    workload: 0,
+    total: 0
+  }
+
+  /**
+   * @memberof module:PagamentoForm
+   * @property {object} workload - configuração de formulário referente a carga horária da parcela
+   * @property {object} service - configuração de formulário referente ao valor da parcela
+   * @property {object} expenses - configuração de formulário referente ao valor das despesas
+   * @property {object} total - configuração de formulário referente ao valor total da parcela
+   * @property {HTMLInputElement} any.field - campo de formulário a ser observado
+   * @property {Function} any.transformer - função aplicada antes de guardar o valor do campo
+   * @property {Number} any.value - valor limite do campo, respeitando o total do contrato
+   * @property {boolean} any.error - identificação de erros
+   */
+  const limits = {
+    workload: {
+      field: $refs.parcelaCargaHoraria,
+      transformer: parseInt,
+      value: 0,
+      error: false
+    },
+    service: {
+      field: $refs.parcelaServico,
+      transformer: currencyToNumber,
+      value: 0,
+      error: false
+    },
+    expenses: {
+      field: $refs.parcelaDespesas,
+      transformer: currencyToNumber,
+      value: 0,
+      error: false
+    },
+    total: {
+      field: $refs.parcelaTotal,
+      transformer: currencyToNumber,
+      value: 0,
+      error: false
+    }
+  }
+
+  return {
+    mount
+  }
+
+  /**
+   * 🔑 Métodos Públicos
+   */
+
+  /**
+   * Realiza a montagem do módulo
+   * @public
+   * @memberof module:PagamentoForm
+   * @param {object} config.emitter - instância global do event emitter
+   */
+  function mount ({ emitter }) {
+    setup({
+      workload: parseInt($refs.parcelaCargaHoraria.value) || 0,
+      service: currencyToNumber($refs.parcelaServico.value),
+      expenses: currencyToNumber($refs.parcelaDespesas.value),
+      total: currencyToNumber($refs.parcelaTotal.value)
+    })
+
+    state.emitter = emitter
+
+    state.installmentType = getInstallmentType(
+      $refs.tipoPagamento.value
+    )
+
+    addTriggers()
+
+    setTotal()
+    handleInstallmentType()
+    setLabelsHelpers()
+    setTagModifier()
+  }
+
+  /**
+   * 🔒 Métodos Privados
+   */
+
+  function setup ({ workload, service, expenses, total }) {
+    limits.workload.value = workload
+    limits.service.value = service
+    limits.expenses.value = expenses
+    limits.total.value = total
+  }
+
+  function addTriggers () {
+    [
+      $refs.parcelaServico,
+      $refs.parcelaDespesas
+    ].forEach(field =>
+      field.addEventListener('change', setTotal)
+    )
+
+    Object.values(limits).forEach(limit =>
+      limit.field.addEventListener(
+        'change', () => handleLimit(limit)
+      )
+    )
+
+    $refs.recolheIss
+      .addEventListener('change', setTagModifier)
+  }
+
+  function setTotal () {
+    state.service = currencyToNumber($refs.parcelaServico.value)
+    state.expenses = currencyToNumber($refs.parcelaDespesas.value)
+    state.workload = parseInt($refs.parcelaCargaHoraria) || 0
+    state.total = state.service + state.expenses
+
+    $refs.parcelaTotal.value = numberToCurrency(state.total)
+
+    $refs.parcelaTotal
+      .dispatchEvent(new Event('change'))
+
+    state.emitter.emit('installments:values', {
+      service: state.service,
+      expenses: state.expenses,
+      workload: state.workload,
+      total: state.total
+    })
+  }
+
+  function handleLimit (limit) {
+    const currentValue = limit.transformer(limit.field.value) || 0
+    const hasError = limit.field.value !== '' &amp;&amp; currentValue > limit.value
+
+    limit.error = hasError
+
+    if (hasError) {
+      addFieldError(limit.field, 'Valor acima do limite máximo')
+    } else {
+      removeFieldError(limit.field)
+    }
+
+    checkErrors()
+  }
+
+  function checkErrors () {
+    const hasErros = Object.values(limits)
+      .some(({ error }) => error)
+
+    return hasErros
+      ? state.emitter
+        .emit('installments:addError', {
+          type: 'installment_above_limit',
+          message: 'O valor da parcela ultrapassa o valor planejado (limite)'
+        })
+      : state.emitter
+        .emit('installments:removeError', 'installment_above_limit')
+  }
+
+  function handleInstallmentType () {
+    if (state.installmentType === 'MEDICAO_MENSAL') {
+      $refs.parcelaCargaHoraria.setAttribute('required', 'S')
+
+      return $refs.parcelaCargaHoraria
+        .closest('.o-form-group')
+        .classList
+        .remove('hidden')
+    }
+
+    if (state.installmentType === 'VALOR_PARCELA') {
+      return $refs.parcelaServico
+        .closest('.o-form-group')
+        .classList
+        .remove('hidden')
+    }
+  }
+
+  function setLabelsHelpers () {
+    setFieldHelper(
+      $refs.parcelaCargaHoraria,
+      `Máx. ${limits.workload.value}h`
+    )
+    setFieldHelper(
+      $refs.parcelaServico,
+      `Máx. R$ ${numberToCurrency(limits.service.value)}`
+    )
+    setFieldHelper(
+      $refs.parcelaDespesas,
+      `Máx. R$ ${numberToCurrency(limits.expenses.value)}`
+    )
+  }
+
+  function setTagModifier () {
+    const modifier = $refs.recolheIss.value === 'Sim'
+      ? '-green'
+      : $refs.recolheIss.value === 'Não'
+        ? '-red'
+        : ''
+
+    $refs.recolheIssTag
+      .classList.remove('-green', '-red')
+
+    $refs.recolheIssTag
+      .classList.add(modifier)
+  }
+}
+
+export default PagamentoForm()
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Sun Aug 01 2021 21:55:46 GMT-0300 (Horário Padrão de Brasília) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
